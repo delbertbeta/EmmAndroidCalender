@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="calendarHeight">72dp</dimen>
+    <dimen name="calendarWidth">48dp</dimen>
+    <dimen name="calendarRadius">6dp</dimen>
+</resources>
