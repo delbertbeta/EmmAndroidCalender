@@ -6,6 +6,28 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="home_button">@drawable/ic_homebutton_boy</item>
+        <item name="face">@drawable/face_1</item>
+        <item name="title_image">@drawable/logo_boy</item>
+        <item name="goal">@drawable/ic_goal_boy</item>
+        <item name="card_1">@color/colorGreen</item>
+        <item name="card_2">@color/colorBlue</item>
+        <item name="card_3">@color/colorDeepBlue</item>
+        <item name="bar_color">@color/colorDeepBlue</item>
+    </style>
+
+    <style name="AppThemeGirl" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPink</item>
+        <item name="colorPrimaryDark">@color/colorPink</item>
+        <item name="colorAccent">@color/colorPink</item>
+        <item name="home_button">@drawable/ic_homebutton_girl</item>
+        <item name="face">@drawable/face_2</item>
+        <item name="title_image">@drawable/logo_girl</item>
+        <item name="goal">@drawable/ic_goal_girl</item>
+        <item name="card_1">@color/colorLightPink</item>
+        <item name="card_2">@color/colorMiddlePink</item>
+        <item name="card_3">@color/colorMeetPink</item>
+        <item name="bar_color">@color/colorDeepPink</item>
     </style>
 
 </resources>

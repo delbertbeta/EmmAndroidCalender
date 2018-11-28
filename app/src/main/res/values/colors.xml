@@ -7,4 +7,10 @@
     <color name="colorGreen">#4EE2B7</color>
     <color name="colorBlue">#66D3F9</color>
     <color name="colorDeepBlue">#40B6DD</color>
+    <color name="colorPink">#F9BBDB</color>
+    <color name="colorLightPink">#FFEFFF</color>
+    <color name="colorMiddlePink">#FDDBEB</color>
+    <color name="colorMeetPink">#FFC4C5</color>
+    <color name="colorDeepPink">#F67EAB</color>
+
 </resources>

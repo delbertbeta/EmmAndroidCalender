@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="home_button" format="reference" />
+    <attr name="face" format="reference" />
+    <attr name="title_image" format="reference" />
+    <attr name="goal" format="reference" />
+    <attr name="card_1" format="reference" />
+    <attr name="card_2" format="reference" />
+    <attr name="card_3" format="reference" />
+    <attr name="bar_color" format="reference" />
+</resources>

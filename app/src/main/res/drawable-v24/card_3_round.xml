@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     >
     <solid
-        android:color="@color/colorBlue"/>
+        android:color="?attr/card_3"/>
     <corners
         android:radius="@dimen/calendarRadius"/>
 </shape>
