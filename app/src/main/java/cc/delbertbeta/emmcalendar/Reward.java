@@ -19,6 +19,10 @@ public class Reward {
         return night;
     }
 
+    public int getSum() {
+        return day + night;
+    }
+
     private int index;
     private int day;
     private int night;

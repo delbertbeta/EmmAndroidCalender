@@ -17,8 +17,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 public class TopPanelDialog extends DialogFragment {
+
+    private int total, today, lastDay;
 
     public interface OnUserChange {
         public void onUserChange();
@@ -34,10 +37,12 @@ public class TopPanelDialog extends DialogFragment {
 
     String user;
 
-    public static TopPanelDialog newInstance(String user) {
+    public static TopPanelDialog newInstance(int total, int lastDay, int today) {
         TopPanelDialog frag = new TopPanelDialog();
         Bundle bundle = new Bundle();
-        bundle.putString("user", user);
+        bundle.putInt("total", total);
+        bundle.putInt("lastDay", lastDay);
+        bundle.putInt("today", today);
         frag.setArguments(bundle);
         return frag;
     }
@@ -46,7 +51,9 @@ public class TopPanelDialog extends DialogFragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            user = getArguments().getString("user");
+            today = getArguments().getInt("today");
+            lastDay = getArguments().getInt("lastDay");
+            total = getArguments().getInt("total");
         }
     }
 
@@ -89,6 +96,9 @@ public class TopPanelDialog extends DialogFragment {
                 getDialog().cancel();
             }
         });
+        ((TextView)view.findViewById(R.id.total)).setText(String.valueOf(total));
+        ((TextView)view.findViewById(R.id.lastDay)).setText(String.valueOf(lastDay));
+        ((TextView)view.findViewById(R.id.today)).setText(String.valueOf(today));
         view.findViewById(R.id.user_switch).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         rewards.add(new Reward(1, 2, 4));
         rewards.add(new Reward(5, 4, 12));
         rewards.add(new Reward(18, 23, 11));
+        int total = 0;
         for (final Reward reward : rewards) {
             textViews.get(reward.getIndex()).setVisibility(View.VISIBLE);
             textViews.get(reward.getIndex()).setText(String.valueOf(reward.getDay() + reward.getNight()));
@@ -57,7 +58,9 @@ public class MainActivity extends AppCompatActivity {
                     dialog.show(manager, "fragment_reward_dialog");
                 }
             });
+            total += reward.getDay() + reward.getNight();
         }
+        ((TextView)findViewById(R.id.textView2)).setText(String.valueOf(total));
     }
 
     private void findAllReward() {
@@ -80,7 +83,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void homeClick(View v) {
         FragmentManager manager = getSupportFragmentManager();
-        TopPanelDialog dialog = TopPanelDialog.newInstance(themeId == R.style.AppTheme ? "boy" : "girl");
+        TopPanelDialog dialog = TopPanelDialog.newInstance(
+                Integer.valueOf(((TextView)findViewById(R.id.textView2)).getText().toString()),
+                rewards.get(rewards.size() - 2).getSum(),
+                rewards.get(rewards.size() - 1).getSum());
         dialog.setOnUserChange(new TopPanelDialog.OnUserChange() {
             @Override
             public void onUserChange() {
