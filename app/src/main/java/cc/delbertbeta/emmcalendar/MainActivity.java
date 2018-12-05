@@ -1,6 +1,8 @@
 package cc.delbertbeta.emmcalendar;
 
+import android.app.Dialog;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -22,6 +24,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void homeClick(View v) {
+//        RewardDialog rewardDialog = new RewardDialog();
+//        rewardDialog.show(getSupportFragmentManager(), "notitile");
+        FragmentManager manager = getSupportFragmentManager();
+        RewardDialog dialog = RewardDialog.newInstance();
+        dialog.show(manager, "fragment_reward_dialog");
+    }
+
+    public void faceClick(View v) {
         if (themeId == R.style.AppTheme) {
             themeId = R.style.AppThemeGirl;
         } else {
@@ -33,6 +43,5 @@ public class MainActivity extends AppCompatActivity {
         setTheme(themeId);
 
         setContentView(R.layout.activity_main);
-
     }
 }

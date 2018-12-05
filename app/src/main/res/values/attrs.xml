@@ -8,4 +8,6 @@
     <attr name="card_2" format="reference" />
     <attr name="card_3" format="reference" />
     <attr name="bar_color" format="reference" />
+    <attr name="right_arrow" format="reference" />
+    <attr name="left_arrow" format="reference" />
 </resources>
