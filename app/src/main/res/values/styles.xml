@@ -8,6 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="home_button">@drawable/ic_homebutton_boy</item>
         <item name="face">@drawable/face_1</item>
+        <item name="name">@string/boy</item>
+        <item name="opposite_name">@string/girl</item>
+        <item name="opposite_face">@drawable/face_2</item>
         <item name="title_image">@drawable/logo_boy</item>
         <item name="goal">@drawable/ic_goal_boy</item>
         <item name="card_1">@color/colorGreen</item>
@@ -24,6 +27,9 @@
         <item name="colorAccent">@color/colorPink</item>
         <item name="home_button">@drawable/ic_homebutton_girl</item>
         <item name="face">@drawable/face_2</item>
+        <item name="opposite_face">@drawable/face_1</item>
+        <item name="name">@string/girl</item>
+        <item name="opposite_name">@string/boy</item>
         <item name="title_image">@drawable/logo_girl</item>
         <item name="goal">@drawable/ic_goal_girl</item>
         <item name="card_1">@color/colorLightPink</item>
@@ -47,6 +53,11 @@
     <style name="dialogWindowAnim" parent="android:Animation">
         <item name="android:windowEnterAnimation">@anim/reward_dialog_in</item>
         <item name="android:windowExitAnimation">@anim/reward_dialog_exit</item>
+    </style>
+
+    <style name="panelWindowAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/panel_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/panel_dialog_exit</item>
     </style>
 
 </resources>

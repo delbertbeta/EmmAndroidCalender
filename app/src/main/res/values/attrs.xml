@@ -2,6 +2,9 @@
 <resources>
     <attr name="home_button" format="reference" />
     <attr name="face" format="reference" />
+    <attr name="opposite_face" format="reference"/>
+    <attr name="name" format="reference" />
+    <attr name="opposite_name" format="reference" />
     <attr name="title_image" format="reference" />
     <attr name="goal" format="reference" />
     <attr name="card_1" format="reference" />

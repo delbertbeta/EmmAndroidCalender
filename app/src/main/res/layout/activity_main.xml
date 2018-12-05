@@ -34,23 +34,22 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:src="?attr/face"
-            android:onClick="faceClick"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+        <TextView android:clickable="false"
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="18dp"
-            android:text="@string/boy"
+            android:text="?attr/name"
             android:textColor="@color/colorWhite"
             android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/faceImageView"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+        <ImageView android:clickable="false"
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,7 +60,7 @@
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/ic_user_level" />
 
-        <TextView
+        <TextView android:clickable="false"
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -75,7 +74,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
 
-        <ImageView
+        <ImageView android:clickable="false"
             android:id="@+id/imageView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -86,7 +85,7 @@
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/coin" />
 
-        <TextView
+        <TextView android:clickable="false"
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -100,7 +99,7 @@
 
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/content_linear_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
@@ -120,7 +119,7 @@
             android:weightSum="7"
             android:layout_marginBottom="4dp">
 
-            <TextView
+            <TextView android:clickable="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -131,7 +130,7 @@
                 tools:layout_editor_absoluteX="32dp"
                 tools:layout_editor_absoluteY="251dp" />
 
-            <TextView
+            <TextView android:clickable="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -142,7 +141,7 @@
                 tools:layout_editor_absoluteX="32dp"
                 tools:layout_editor_absoluteY="251dp" />
 
-            <TextView
+            <TextView android:clickable="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -153,7 +152,7 @@
                 tools:layout_editor_absoluteX="32dp"
                 tools:layout_editor_absoluteY="251dp" />
 
-            <TextView
+            <TextView android:clickable="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -164,7 +163,7 @@
                 tools:layout_editor_absoluteX="32dp"
                 tools:layout_editor_absoluteY="251dp" />
 
-            <TextView
+            <TextView android:clickable="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -175,7 +174,7 @@
                 tools:layout_editor_absoluteX="32dp"
                 tools:layout_editor_absoluteY="251dp" />
 
-            <TextView
+            <TextView android:clickable="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -186,7 +185,7 @@
                 tools:layout_editor_absoluteX="32dp"
                 tools:layout_editor_absoluteY="251dp" />
 
-            <TextView
+            <TextView android:clickable="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -205,7 +204,7 @@
             android:orientation="horizontal"
             android:weightSum="7">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -214,10 +213,30 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_1_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_1_round"
+                    />
 
-            <LinearLayout
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -226,10 +245,30 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_1_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_1_round"
+                    />
 
-            <LinearLayout
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -238,10 +277,30 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_1_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_1_round"
+                    />
 
-            <LinearLayout
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -250,10 +309,30 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_1_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_1_round"
+                    />
 
-            <LinearLayout
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -262,10 +341,30 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_1_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_1_round"
+                    />
 
-            <LinearLayout
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -274,10 +373,30 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_1_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_1_round"
+                    />
 
-            <LinearLayout
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -286,8 +405,28 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_1_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_1_round"
+                    />
+
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
 
 
         </LinearLayout>
@@ -299,7 +438,7 @@
             android:orientation="horizontal"
             android:weightSum="7">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -308,10 +447,30 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_2_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_2_round"
+                    />
 
-            <LinearLayout
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -320,10 +479,30 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_2_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_2_round"
+                    />
 
-            <LinearLayout
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -332,10 +511,30 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_2_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_2_round"
+                    />
 
-            <LinearLayout
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -344,10 +543,30 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_2_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_2_round"
+                    />
 
-            <LinearLayout
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -356,10 +575,30 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_2_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_2_round"
+                    />
 
-            <LinearLayout
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -368,10 +607,30 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_2_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_2_round"
+                    />
 
-            <LinearLayout
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -380,8 +639,28 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_2_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_2_round"
+                    />
+
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
 
 
         </LinearLayout>
@@ -393,7 +672,7 @@
             android:orientation="horizontal"
             android:weightSum="7">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -402,10 +681,31 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_3_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_3_round"
+                    />
 
-            <LinearLayout
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -414,10 +714,31 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_3_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_3_round"
+                    />
 
-            <LinearLayout
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -426,10 +747,31 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_3_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_3_round"
+                    />
 
-            <LinearLayout
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -438,10 +780,31 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_3_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_3_round"
+                    />
 
-            <LinearLayout
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -450,10 +813,31 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_3_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_3_round"
+                    />
 
-            <LinearLayout
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -462,10 +846,31 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_3_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_3_round"
+                    />
 
-            <LinearLayout
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -474,15 +879,35 @@
                 <ImageButton
                     android:layout_width="@dimen/calendarWidth"
                     android:layout_height="@dimen/calendarHeight"
-                    android:background="@drawable/card_3_round" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/card_3_round"
+                    />
+
+                <ImageView android:clickable="false"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:src="@drawable/star"/>
+
+                <TextView android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="?attr/card_3"/>
+
+            </RelativeLayout>
 
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <ImageView
+    <ImageView android:clickable="false"
         android:id="@+id/imageView4"
         android:layout_height="88dp"
         android:layout_width="match_parent"
@@ -494,7 +919,7 @@
         app:srcCompat="?attr/title_image" />
 
 
-    <TextView
+    <TextView android:clickable="false"
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="32dp"
@@ -503,19 +928,19 @@
         android:text="2016年06月24日 - 07月14日"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/content_linear_layout"
         tools:layout_editor_absoluteX="16dp" />
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
-        <ImageView
+        <ImageView android:clickable="false"
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="110dp"
@@ -530,7 +955,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="?attr/goal" />
 
-        <TextView
+        <TextView android:clickable="false"
             android:id="@+id/textView5"
             android:layout_width="228dp"
             android:layout_height="36dp"
@@ -545,6 +970,18 @@
     </android.support.constraint.ConstraintLayout>
 
 
+    <!--<LinearLayout-->
+        <!--android:id="@+id/top_panel"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--app:behavior_hideable="true"-->
+        <!--app:behavior_peekHeight="56dp"-->
+        <!--app:layout_behavior="cc.delbertbeta.emmcalendar.TopSheetBehavior">-->
 
+        <!--<TextView android:clickable="false"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="迪斯科飞机上的雷锋精神灯笼裤飞机"/>-->
+    <!--</LinearLayout>-->
 
 </android.support.constraint.ConstraintLayout>

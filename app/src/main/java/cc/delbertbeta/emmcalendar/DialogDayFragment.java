@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -20,6 +21,7 @@ import android.view.ViewGroup;
  */
 public class DialogDayFragment extends Fragment {
     private int index;
+    private int count;
 
     private OnFragmentInteractionListener mListener;
 
@@ -28,10 +30,11 @@ public class DialogDayFragment extends Fragment {
     }
 
 
-    public static DialogDayFragment newInstance(int index) {
+    public static DialogDayFragment newInstance(int index, int count) {
         DialogDayFragment fragment = new DialogDayFragment();
         Bundle args = new Bundle();
         args.putInt("index", index);
+        args.putInt("count", count);
         fragment.setArguments(args);
         return fragment;
     }
@@ -41,6 +44,7 @@ public class DialogDayFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             index = getArguments().getInt("index");
+            count = getArguments().getInt("count");
         }
     }
 
@@ -49,6 +53,7 @@ public class DialogDayFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_dialog_day, container, false);
+        ((TextView)view.findViewById(R.id.dialog_count)).setText(String.valueOf(count));
         view.findViewById(R.id.right_arrow).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

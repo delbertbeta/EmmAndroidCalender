@@ -7,27 +7,37 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.util.DisplayMetrics;
 import android.view.Display;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class RewardDialog extends DialogFragment {
+public class TopPanelDialog extends DialogFragment {
+
+    public interface OnUserChange {
+        public void onUserChange();
+    }
+
+    public void setOnUserChange(OnUserChange onUserChange) {
+        this.onUserChange = onUserChange;
+    }
+
+    OnUserChange onUserChange;
 
     View view;
 
-    private int day;
-    private int night;
+    String user;
 
-    public static RewardDialog newInstance(int day, int night) {
-        RewardDialog frag = new RewardDialog();
+    public static TopPanelDialog newInstance(String user) {
+        TopPanelDialog frag = new TopPanelDialog();
         Bundle bundle = new Bundle();
-        bundle.putInt("day", day);
-        bundle.putInt("night", night);
+        bundle.putString("user", user);
         frag.setArguments(bundle);
         return frag;
     }
@@ -35,10 +45,8 @@ public class RewardDialog extends DialogFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-            day = bundle.getInt("day");
-            night = bundle.getInt("night");
+        if (getArguments() != null) {
+            user = getArguments().getString("user");
         }
     }
 
@@ -54,8 +62,11 @@ public class RewardDialog extends DialogFragment {
         display.getMetrics(dm);
 
         WindowManager.LayoutParams params = window.getAttributes();
-        params.width = (int)Math.round(dm.widthPixels * 0.8);
-        params.height = 1000;
+        params.gravity = Gravity.TOP;
+        params.width = WindowManager.LayoutParams.MATCH_PARENT;
+        params.height = WindowManager.LayoutParams.WRAP_CONTENT;
+//        params.width = (int)Math.round(dm.widthPixels * 0.8);
+//        params.height = 1000;
         window.setAttributes(params);
     }
 
@@ -64,15 +75,27 @@ public class RewardDialog extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle
             savedInstanceState) {
         getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        getDialog().getWindow().setWindowAnimations(R.style.dialogWindowAnim);
-        view = inflater.inflate(R.layout.reward_dialog, container);
+        getDialog().getWindow().setWindowAnimations(R.style.panelWindowAnim);
+        view = inflater.inflate(R.layout.fragment_top_panel, container);
         return view;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ViewPager pager = view.findViewById(R.id.dialog_view_pager);
-        pager.setAdapter(new DialogPagerAdapter(getChildFragmentManager(), day, night));
+        view.findViewById(R.id.close_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getDialog().cancel();
+            }
+        });
+        view.findViewById(R.id.user_switch).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onUserChange.onUserChange();
+                getDialog().cancel();
+            }
+
+        });
     }
 }

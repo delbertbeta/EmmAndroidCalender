@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Calendar</string>
-    <string name="boy">宝宝</string>
+    <string name="boy">delbertbeta</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="girl">shyrii</string>
 </resources>

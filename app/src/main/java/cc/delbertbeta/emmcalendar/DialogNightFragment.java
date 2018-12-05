@@ -8,6 +8,9 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 
 /**
@@ -20,6 +23,7 @@ import android.view.ViewGroup;
  */
 public class DialogNightFragment extends Fragment {
     private int index;
+    private int count;
 
     private DialogDayFragment.OnFragmentInteractionListener mListener;
 
@@ -27,10 +31,11 @@ public class DialogNightFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public static DialogNightFragment newInstance(int index) {
+    public static DialogNightFragment newInstance(int index, int count) {
         DialogNightFragment fragment = new DialogNightFragment();
         Bundle args = new Bundle();
         args.putInt("index", index);
+        args.putInt("count", count);
         fragment.setArguments(args);
         return fragment;
     }
@@ -40,6 +45,7 @@ public class DialogNightFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             index = getArguments().getInt("index");
+            count = getArguments().getInt("count");
         }
     }
 
@@ -48,10 +54,11 @@ public class DialogNightFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_dialog_night, container, false);
+        ((TextView)view.findViewById(R.id.dialog_count)).setText(String.valueOf(count));
         view.findViewById(R.id.left_arrow).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((ViewPager)getParentFragment().getView().findViewById(R.id.dialog_view_pager)).setCurrentItem(0);
+                ((ViewPager) getParentFragment().getView().findViewById(R.id.dialog_view_pager)).setCurrentItem(0);
             }
         });
         return view;
