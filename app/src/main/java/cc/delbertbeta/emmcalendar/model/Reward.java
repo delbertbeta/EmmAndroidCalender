@@ -1,6 +1,9 @@
-package cc.delbertbeta.emmcalendar;
+package cc.delbertbeta.emmcalendar.model;
 
 public class Reward {
+
+
+
     public Reward(int index, int day, int night) {
         this.index = index;
         this.day = day;

@@ -1,8 +1,11 @@
-package cc.delbertbeta.emmcalendar;
+package cc.delbertbeta.emmcalendar.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import cc.delbertbeta.emmcalendar.controller.DialogDayFragment;
+import cc.delbertbeta.emmcalendar.controller.DialogNightFragment;
 
 public class DialogPagerAdapter extends FragmentPagerAdapter {
 

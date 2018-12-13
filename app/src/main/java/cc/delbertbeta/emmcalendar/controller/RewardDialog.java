@@ -1,4 +1,4 @@
-package cc.delbertbeta.emmcalendar;
+package cc.delbertbeta.emmcalendar.controller;
 
 import android.app.Dialog;
 import android.graphics.Color;
@@ -15,6 +15,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+
+import cc.delbertbeta.emmcalendar.adapter.DialogPagerAdapter;
+import cc.delbertbeta.emmcalendar.R;
 
 public class RewardDialog extends DialogFragment {
 

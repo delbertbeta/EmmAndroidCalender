@@ -1,25 +1,24 @@
-package cc.delbertbeta.emmcalendar;
+package cc.delbertbeta.emmcalendar.controller;
 
-import android.app.Dialog;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.AttributeSet;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import cc.delbertbeta.emmcalendar.R;
+import cc.delbertbeta.emmcalendar.controller.RewardDialog;
+import cc.delbertbeta.emmcalendar.controller.TopPanelDialog;
+import cc.delbertbeta.emmcalendar.model.Reward;
 
 public class MainActivity extends AppCompatActivity {
 
